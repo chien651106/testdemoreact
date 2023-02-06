@@ -1,12 +1,14 @@
 import React from "react";
-import "./App.css";
+import "./style/App.scss";
 import MyComponent from "./component/MyComponent";
+import logo from "./static/img/logo.svg"
 
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <div className="app-container">
         abcxyz
+        {/* <img src={logo} alt=""></img> */}
         <MyComponent></MyComponent>
       </div>
     );
