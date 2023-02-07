@@ -54,8 +54,8 @@ const MyComponent = (props) => {
     //   listUser: [userObj, ...this.state.listUser],
     // });
   };
-  const handleDeleteUsser = (userId) => {
-    let listUserclone = [listUser];
+  const handleDeleteUser = (userId) => {
+    let listUserclone = listUser;
     listUserclone = listUserclone.filter((item) => item.id !== userId);
     setlistUser(listUserclone);
     // this.setState({
@@ -67,10 +67,9 @@ const MyComponent = (props) => {
       <div className="a">
         <UserInfo handleAddNewUser={handleAddNewUser} />
         <br />
-        {/* <DisplayInfo name="Eric" age="26" myInfo={myInfo}/> */}
-        <DisplayInfo
+         <DisplayInfo
           listUser={listUser}
-          handleDeleteUsser={handleDeleteUsser}
+          handleDeleteUser={handleDeleteUser}
         />
       </div>
       <div className="b"></div>
